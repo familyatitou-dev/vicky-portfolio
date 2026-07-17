@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import FadeIn from './FadeIn';
 import { saveUpload, loadUpload, removeUpload } from '../utils/storage';
 
