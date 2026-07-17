@@ -26,7 +26,7 @@ Error generating stack: `+e.message+`
             top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0`,children:(0,U.jsxs)(`div`,{className:`relative group`,children:[(0,U.jsx)(`div`,{className:`absolute -inset-2 rounded-full opacity-40 blur-xl
               bg-gradient-to-r from-[#B600A8]/30 via-[#7621B0]/20 to-[#BE4C00]/30
               group-hover:opacity-60 transition-opacity duration-500`}),(0,U.jsxs)(`div`,{className:`relative rounded-full overflow-hidden
-              ring-1 ring-white/10 shadow-2xl shadow-purple-900/20`,children:[(0,U.jsx)(`img`,{src:`/photos/3b336373aad37892618ccd6819bc7002.jpg`,alt:`Vicky`,className:`w-full h-auto object-cover block
+              ring-1 ring-white/10 shadow-2xl shadow-purple-900/20`,children:[(0,U.jsx)(`img`,{src:`./photos/3b336373aad37892618ccd6819bc7002.jpg`,alt:`Vicky`,className:`w-full h-auto object-cover block
                   contrast-110 brightness-90 saturate-75`}),(0,U.jsx)(`div`,{className:`absolute inset-0 rounded-full
                 bg-gradient-to-t from-[#0C0C0C]/80 via-transparent to-transparent`}),(0,U.jsx)(`div`,{className:`absolute inset-0 rounded-full
                 bg-gradient-to-br from-white/5 via-transparent to-transparent`})]})]})})})]})}var gu=[[`AI Agent`,`Workflow 搭建`,`Skill 开发`,`AI 视频生成`,`AI 文案创作`,`批量内容产出`,`Vibe Coding`,`自动化工具`,`Prompt 工程`],[`抖音运营`,`小红书运营`,`快手运营`,`Shopee`,`直播带货`,`短视频策划`,`账号矩阵`,`跨境电商`],[`数据分析`,`Python`,`SQL`,`流量增长`,`用户转化`,`内容策略`,`竞品调研`,`复盘优化`,`SOP 搭建`,`爆款逻辑`],[`剪映`,`Photoshop`,`口播脚本`,`视频剪辑`,`海报设计`,`混剪创作`,`PPT 设计`,`品牌视觉`]];function _u({label:e}){return(0,U.jsx)(`span`,{className:`inline-flex items-center px-5 py-2.5 sm:px-7 sm:py-3

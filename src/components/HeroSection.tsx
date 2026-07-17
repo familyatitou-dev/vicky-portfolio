@@ -106,7 +106,7 @@ export default function HeroSection() {
             <div className="relative rounded-full overflow-hidden
               ring-1 ring-white/10 shadow-2xl shadow-purple-900/20">
               <img
-                src="/photos/3b336373aad37892618ccd6819bc7002.jpg"
+                src={import.meta.env.BASE_URL + 'photos/3b336373aad37892618ccd6819bc7002.jpg'}
                 alt="Vicky"
                 className="w-full h-auto object-cover block
                   contrast-110 brightness-90 saturate-75"
