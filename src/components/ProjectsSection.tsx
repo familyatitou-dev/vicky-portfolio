@@ -28,7 +28,7 @@ const AI_ITEMS: PortfolioItem[] = [
     items: [{ label: '网页链接 ①' }, { label: '网页链接 ②' }] },
   { label: 'AI商业视频', count: '×2', type: 'video',
     items: [{ label: 'AI商业视频 ①' },{ label: 'AI商业视频 ②' }] },
-  { label: 'Skill搭建', count: '×1', type: 'link', items: [{ label: 'Skill链接' }] },
+  { label: 'Skill搭建', count: '×2', type: 'link', items: [{ label: 'Skill链接 ①' }, { label: 'Skill链接 ②' }] },
 ];
 
 const LINK_PREFIX = 'vicky-link-';
