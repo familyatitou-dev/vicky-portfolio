@@ -20,8 +20,9 @@ function getPreloadedFile(key: string): string | null {
   return import.meta.env.BASE_URL + preloadCache.files[key];
 }
 function getPreloadedLink(key: string): { url: string; desc: string } | null {
-  if (!preloadCache?.links[key]) return null;
-  return preloadCache.links[key];
+  if (!preloadCache?.links) return null;
+  // Manifest keys include 'vicky-link-' prefix
+  return preloadCache.links[LINK_PREFIX + key] ?? preloadCache.links[key] ?? null;
 }
 
 interface PortfolioItem {
