@@ -2,6 +2,28 @@ import { useState, useRef, useEffect } from 'react';
 import FadeIn from './FadeIn';
 import { saveUpload, loadUpload, removeUpload, exportAll } from '../utils/storage';
 
+// Pre-loaded portfolio files — deployed with the site, works cross-device
+let preloadCache: { files: Record<string, string>; links: Record<string, { url: string; desc: string }> } | null = null;
+async function getPreload(): Promise<typeof preloadCache> {
+  if (preloadCache) return preloadCache;
+  try {
+    const res = await fetch(import.meta.env.BASE_URL + 'portfolio/manifest.json');
+    if (res.ok) {
+      preloadCache = await res.json();
+      return preloadCache;
+    }
+  } catch {}
+  return null;
+}
+function getPreloadedFile(key: string): string | null {
+  if (!preloadCache?.files[key]) return null;
+  return import.meta.env.BASE_URL + preloadCache.files[key];
+}
+function getPreloadedLink(key: string): { url: string; desc: string } | null {
+  if (!preloadCache?.links[key]) return null;
+  return preloadCache.links[key];
+}
+
 interface PortfolioItem {
   label: string;
   count: string;
@@ -53,9 +75,18 @@ function PlaceholderCard({
   const [loading, setLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load from storage on mount
+  // Load from storage on mount — preloaded files first
   useEffect(() => {
     if (type === 'link') {
+      // Check preloaded first
+      const preload = getPreloadedLink(storageKey);
+      if (preload) {
+        setLinkUrl(preload.url);
+        setLinkDesc(preload.desc);
+        setLoading(false);
+        return;
+      }
+      // Fallback to localStorage
       const saved = localStorage.getItem(LINK_PREFIX + storageKey);
       if (saved) {
         try {
@@ -68,6 +99,14 @@ function PlaceholderCard({
       }
       setLoading(false);
     } else {
+      // Check preloaded first
+      const preloadUrl = getPreloadedFile(storageKey);
+      if (preloadUrl) {
+        setPreview(preloadUrl);
+        setLoading(false);
+        return;
+      }
+      // Fallback to IndexedDB
       loadUpload(storageKey).then((data) => {
         if (data) setPreview(data);
       }).finally(() => setLoading(false));
@@ -373,6 +412,9 @@ export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<'newmedia' | 'ai'>('newmedia');
   const [exporting, setExporting] = useState(false);
   const editable = window.location.search.includes('edit');
+
+  // Preload manifest on mount
+  useEffect(() => { getPreload(); }, []);
 
   const handleExport = async () => {
     setExporting(true);
