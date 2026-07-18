@@ -38,11 +38,13 @@ function PlaceholderCard({
   type,
   storageKey,
   aspect = '9/16',
+  editable = false,
 }: {
   label: string;
   type: 'image' | 'video' | 'link';
   storageKey: string;
   aspect?: string;
+  editable?: boolean;
 }) {
   const [preview, setPreview] = useState<string | null>(null);
   const [linkUrl, setLinkUrl] = useState('');
@@ -73,6 +75,7 @@ function PlaceholderCard({
   }, [storageKey, type]);
 
   const handleClick = () => {
+    if (!editable) return;
     if (type === 'link') {
       setShowLinkInput(true);
     } else {
@@ -129,27 +132,30 @@ function PlaceholderCard({
 
   return (
     <>
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept={type === 'image' ? 'image/*' : 'video/*'}
-        className="hidden"
-        onChange={handleFileChange}
-      />
+      {editable && (
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept={type === 'image' ? 'image/*' : 'video/*'}
+          className="hidden"
+          onChange={handleFileChange}
+        />
+      )}
 
       <div
         onClick={handleClick}
-        style={{
-          aspectRatio: aspect,
-          background: type === 'link'
-            ? 'linear-gradient(135deg, #2a1a30, #1a1525)'
-            : 'linear-gradient(135deg, #1a1a1a, #0C0C0C)',
-          borderColor: type === 'link' ? 'rgba(182,0,168,0.3)' : 'rgba(215,226,234,0.1)',
-        }}
         className="rounded-2xl sm:rounded-3xl border
           flex flex-col items-center justify-center gap-2
           hover:border-[#D7E2EA]/30 transition-colors duration-300
-          cursor-pointer group relative overflow-hidden"
+          group relative overflow-hidden"
+        style={{
+            aspectRatio: aspect,
+            background: type === 'link'
+              ? 'linear-gradient(135deg, #2a1a30, #1a1525)'
+              : 'linear-gradient(135deg, #1a1a1a, #0C0C0C)',
+            borderColor: type === 'link' ? 'rgba(182,0,168,0.3)' : 'rgba(215,226,234,0.1)',
+            cursor: editable ? 'pointer' : 'default',
+          }}
       >
         {loading ? (
           <span className="text-[#D7E2EA]/30 text-xs">加载中...</span>
@@ -160,14 +166,16 @@ function PlaceholderCard({
             ) : (
               <img src={preview} alt={label} className="w-full h-full object-cover" />
             )}
-            <button
-              onClick={handleRemove}
-              className="absolute top-2 right-2 bg-black/70 text-white/70
-                text-xs px-2 py-1 rounded-full hover:bg-red-700/80
-                transition-colors"
-            >
-              删除
-            </button>
+            {editable && (
+              <button
+                onClick={handleRemove}
+                className="absolute top-2 right-2 bg-black/70 text-white/70
+                  text-xs px-2 py-1 rounded-full hover:bg-red-700/80
+                  transition-colors"
+              >
+                删除
+              </button>
+            )}
           </>
         ) : linkUrl ? (
           <div className="flex flex-col items-center justify-between h-full p-3 sm:p-4">
@@ -187,47 +195,62 @@ function PlaceholderCard({
                 </p>
               )}
             </div>
-            <div className="flex gap-3 mt-auto pt-2">
-              <button
-                onClick={(e) => { e.stopPropagation(); setShowLinkInput(true); }}
-                className="text-[#D7E2EA]/50 text-[10px] hover:text-[#D7E2EA] transition-colors"
-              >
-                编辑
-              </button>
-              <button
-                onClick={(e) => { e.stopPropagation(); handleLinkRemove(); }}
-                className="text-red-500/50 text-[10px] hover:text-red-400 transition-colors"
-              >
-                删除
-              </button>
-            </div>
+            {editable && (
+              <div className="flex gap-3 mt-auto pt-2">
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowLinkInput(true); }}
+                  className="text-[#D7E2EA]/50 text-[10px] hover:text-[#D7E2EA] transition-colors"
+                >
+                  编辑
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleLinkRemove(); }}
+                  className="text-red-500/50 text-[10px] hover:text-red-400 transition-colors"
+                >
+                  删除
+                </button>
+              </div>
+            )}
           </div>
         ) : type === 'link' ? (
-          <div className="flex flex-col items-center justify-center gap-2 p-3">
-            <span className="text-lg sm:text-xl opacity-50">🔗</span>
-            <span className="text-[#D7E2EA]/50 text-xs sm:text-sm tracking-wider text-center">
-              {label}
-            </span>
-            <span className="text-[#D7E2EA]/20 text-[10px] tracking-wider text-center">
-              {label.includes('网页') ? '粘贴链接地址' : '粘贴 Skill 链接'}
-            </span>
-            <span className="text-[#D7E2EA]/15 text-[10px] tracking-widest uppercase mt-1">
-              点击添加
-            </span>
-          </div>
+          editable ? (
+            <div className="flex flex-col items-center justify-center gap-2 p-3">
+              <span className="text-lg sm:text-xl opacity-50">🔗</span>
+              <span className="text-[#D7E2EA]/50 text-xs sm:text-sm tracking-wider text-center">
+                {label}
+              </span>
+              <span className="text-[#D7E2EA]/20 text-[10px] tracking-wider text-center">
+                {label.includes('网页') ? '粘贴链接地址' : '粘贴 Skill 链接'}
+              </span>
+              <span className="text-[#D7E2EA]/15 text-[10px] tracking-widest uppercase mt-1">
+                点击添加
+              </span>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center gap-2 p-3">
+              <span className="text-lg sm:text-xl opacity-30">🔗</span>
+              <span className="text-[#D7E2EA]/30 text-xs sm:text-sm tracking-wider text-center">
+                暂未添加
+              </span>
+            </div>
+          )
         ) : (
-          <>
-            <span className="text-2xl sm:text-3xl opacity-40 group-hover:opacity-60 transition-opacity">
-              {icons[type]}
-            </span>
-            <span className="text-[#D7E2EA]/40 text-xs sm:text-sm tracking-wider
-              group-hover:text-[#D7E2EA]/60 transition-colors">
-              {label}
-            </span>
-            <span className="text-[#D7E2EA]/20 text-[10px] tracking-widest uppercase mt-1">
-              点击上传
-            </span>
-          </>
+          editable ? (
+            <>
+              <span className="text-2xl sm:text-3xl opacity-40 group-hover:opacity-60 transition-opacity">
+                {icons[type]}
+              </span>
+              <span className="text-[#D7E2EA]/40 text-xs sm:text-sm tracking-wider
+                group-hover:text-[#D7E2EA]/60 transition-colors">
+                {label}
+              </span>
+              <span className="text-[#D7E2EA]/20 text-[10px] tracking-widest uppercase mt-1">
+                点击上传
+              </span>
+            </>
+          ) : (
+            <span className="text-[#D7E2EA]/25 text-xs tracking-wider">—</span>
+          )
         )}
       </div>
 
@@ -295,11 +318,13 @@ function PortfolioCategory({
   subtitle,
   items,
   tabKey,
+  editable,
 }: {
   title: string;
   subtitle: string;
   items: PortfolioItem[];
   tabKey: string;
+  editable: boolean;
 }) {
   return (
     <div className="mb-16 sm:mb-20 md:mb-24">
@@ -334,6 +359,7 @@ function PortfolioCategory({
                 type={item.type}
                 storageKey={`${tabKey}-${item.label}-${j}`}
                 aspect={item.aspect}
+                editable={editable}
               />
             ))}
           </div>
@@ -345,6 +371,7 @@ function PortfolioCategory({
 
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<'newmedia' | 'ai'>('newmedia');
+  const editable = window.location.search.includes('edit');
 
   const tabs = [
     { key: 'newmedia' as const, label: '新媒体运营', sub: '短视频 · 直播 · 账号矩阵' },
@@ -389,7 +416,9 @@ export default function ProjectsSection() {
           {tabs.find((t) => t.key === activeTab)?.sub}
         </p>
         <p className="text-[#D7E2EA]/15 text-[10px] sm:text-xs tracking-wide mt-3">
-          💡 上传内容保存在当前浏览器，同一设备同一浏览器刷新不丢失；换设备需重新上传
+          {editable
+            ? '💡 编辑模式：上传内容保存在当前浏览器，刷新不丢失'
+            : '💡 分享模式 · 只读 — 添加 ?edit 到网址末尾即可编辑'}
         </p>
       </div>
 
@@ -401,6 +430,7 @@ export default function ProjectsSection() {
               subtitle="账号运营 · 内容创作 · 流量增长"
               items={NEW_MEDIA_ITEMS}
               tabKey="newmedia"
+              editable={editable}
             />
           </FadeIn>
         )}
@@ -411,6 +441,7 @@ export default function ProjectsSection() {
               subtitle="智能工具 · 自动化 · 效率提升"
               items={AI_ITEMS}
               tabKey="ai"
+              editable={editable}
             />
           </FadeIn>
         )}
