@@ -11,8 +11,8 @@ interface PortfolioItem {
 }
 
 const NEW_MEDIA_ITEMS: PortfolioItem[] = [
-  { label: '小红书账号', count: '×1', type: 'image', aspect: '9/19', items: [{ label: '小红书主页截图' }] },
-  { label: '抖音账号矩阵', count: '×4', type: 'image', aspect: '9/19',
+  { label: '小红书账号', count: '×1', type: 'image', aspect: '9/16', items: [{ label: '小红书主页截图' }] },
+  { label: '抖音账号矩阵', count: '×4', type: 'image', aspect: '9/16',
     items: [{ label: '抖音账号 ①' },{ label: '抖音账号 ②' },{ label: '抖音账号 ③' },{ label: '抖音账号 ④' }] },
   { label: '口播剪辑', count: '×5', type: 'video',
     items: [{ label: '口播作品 ①' },{ label: '口播作品 ②' },{ label: '口播作品 ③' },{ label: '口播作品 ④' },{ label: '口播作品 ⑤' }] },
