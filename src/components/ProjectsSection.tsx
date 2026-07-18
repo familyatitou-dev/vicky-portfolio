@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import FadeIn from './FadeIn';
-import { saveUpload, loadUpload, removeUpload } from '../utils/storage';
+import { saveUpload, loadUpload, removeUpload, exportAll } from '../utils/storage';
 
 interface PortfolioItem {
   label: string;
@@ -371,7 +371,34 @@ function PortfolioCategory({
 
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<'newmedia' | 'ai'>('newmedia');
+  const [exporting, setExporting] = useState(false);
   const editable = window.location.search.includes('edit');
+
+  const handleExport = async () => {
+    setExporting(true);
+    try {
+      const indexDBData = await exportAll();
+      const linkData: Record<string, string | null> = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key?.startsWith('vicky-link-')) {
+          linkData[key] = localStorage.getItem(key);
+        }
+      }
+      const fullExport = { indexDB: indexDBData, links: linkData, exportedAt: new Date().toISOString() };
+      const blob = new Blob([JSON.stringify(fullExport, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'vicky-portfolio-backup.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      alert('导出成功！把下载的 JSON 文件发给我，我帮你放到项目里。');
+    } catch (e) {
+      alert('导出失败：' + e);
+    }
+    setExporting(false);
+  };
 
   const tabs = [
     { key: 'newmedia' as const, label: '新媒体运营', sub: '短视频 · 直播 · 账号矩阵' },
@@ -383,12 +410,26 @@ export default function ProjectsSection() {
       id="projects"
       className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10 px-5 sm:px-8 md:px-10 pt-16 sm:pt-20 md:pt-24"
     >
-      <h2
-        className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-8 sm:mb-12"
-        style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-      >
-        作品集
-      </h2>
+      <div className="flex items-center justify-center gap-4 mb-8 sm:mb-12 flex-wrap">
+        <h2
+          className="hero-heading font-black uppercase leading-none tracking-tight text-center"
+          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+        >
+          作品集
+        </h2>
+        {editable && (
+          <button
+            onClick={handleExport}
+            disabled={exporting}
+            className="rounded-full border border-[#B600A8]/40 text-[#B600A8]/70
+              px-4 py-2 text-xs tracking-wider
+              hover:bg-[#B600A8]/10 hover:text-[#B600A8]
+              transition-colors cursor-pointer disabled:opacity-30"
+          >
+            {exporting ? '导出中...' : '📦 导出数据'}
+          </button>
+        )}
+      </div>
 
       <div className="flex justify-center mb-12 sm:mb-16">
         <div className="flex bg-[#1a1a1a] rounded-full p-1 gap-1 border border-[#D7E2EA]/10">

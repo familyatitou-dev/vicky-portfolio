@@ -46,3 +46,26 @@ export async function removeUpload(key: string): Promise<void> {
     tx.onerror = () => reject(tx.error);
   });
 }
+
+export async function exportAll(): Promise<Record<string, string>> {
+  const db = await openDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const req = tx.objectStore(STORE_NAME).getAllKeys();
+    req.onsuccess = async () => {
+      const keys = req.result;
+      const data: Record<string, string> = {};
+      const readTx = db.transaction(STORE_NAME, 'readonly');
+      for (const key of keys) {
+        const val = await new Promise<string | null>((res) => {
+          const r = readTx.objectStore(STORE_NAME).get(key);
+          r.onsuccess = () => res(r.result ?? null);
+          r.onerror = () => res(null);
+        });
+        if (val) data[key as string] = val;
+      }
+      resolve(data);
+    };
+    req.onerror = () => reject(req.error);
+  });
+}
