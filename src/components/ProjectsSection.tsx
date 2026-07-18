@@ -24,11 +24,11 @@ const NEW_MEDIA_ITEMS: PortfolioItem[] = [
 const AI_ITEMS: PortfolioItem[] = [
   { label: '海报设计', count: '×10', type: 'image',
     items: [{ label: '海报 ①' },{ label: '海报 ②' },{ label: '海报 ③' },{ label: '海报 ④' },{ label: '海报 ⑤' },{ label: '海报 ⑥' },{ label: '海报 ⑦' },{ label: '海报 ⑧' },{ label: '海报 ⑨' },{ label: '海报 ⑩' }] },
-  { label: '网页制作', count: '×2', type: 'link',
+  { label: '网页制作', count: '×2', type: 'link', aspect: '16/9',
     items: [{ label: '网页链接 ①' }, { label: '网页链接 ②' }] },
   { label: 'AI商业视频', count: '×2', type: 'video',
     items: [{ label: 'AI商业视频 ①' },{ label: 'AI商业视频 ②' }] },
-  { label: 'Skill搭建', count: '×2', type: 'link', items: [{ label: 'Skill链接 ①' }, { label: 'Skill链接 ②' }] },
+  { label: 'Skill搭建', count: '×2', type: 'link', aspect: '16/9', items: [{ label: 'Skill链接 ①' }, { label: 'Skill链接 ②' }] },
 ];
 
 const LINK_PREFIX = 'vicky-link-';
@@ -128,9 +128,9 @@ function PlaceholderCard({
         style={{
           aspectRatio: aspect,
           background: type === 'link'
-            ? 'linear-gradient(135deg, #1a1020, #0f0a14)'
+            ? 'linear-gradient(135deg, #2a1a30, #1a1525)'
             : 'linear-gradient(135deg, #1a1a1a, #0C0C0C)',
-          borderColor: type === 'link' ? 'rgba(182,0,168,0.15)' : 'rgba(215,226,234,0.1)',
+          borderColor: type === 'link' ? 'rgba(182,0,168,0.3)' : 'rgba(215,226,234,0.1)',
         }}
         className="rounded-2xl sm:rounded-3xl border
           flex flex-col items-center justify-center gap-2
