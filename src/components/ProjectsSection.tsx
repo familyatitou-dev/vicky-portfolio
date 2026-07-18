@@ -38,7 +38,7 @@ function PlaceholderCard({
   label,
   type,
   storageKey,
-  aspect = '4/3',
+  aspect = '9/16',
 }: {
   label: string;
   type: 'image' | 'video' | 'link';
