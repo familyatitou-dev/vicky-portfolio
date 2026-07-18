@@ -46,6 +46,7 @@ function PlaceholderCard({
 }) {
   const [preview, setPreview] = useState<string | null>(null);
   const [linkUrl, setLinkUrl] = useState('');
+  const [linkDesc, setLinkDesc] = useState('');
   const [showLinkInput, setShowLinkInput] = useState(false);
   const [loading, setLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -54,13 +55,21 @@ function PlaceholderCard({
   useEffect(() => {
     if (type === 'link') {
       const saved = localStorage.getItem(LINK_PREFIX + storageKey);
-      if (saved) setLinkUrl(saved);
+      if (saved) {
+        try {
+          const data = JSON.parse(saved);
+          setLinkUrl(data.url || '');
+          setLinkDesc(data.desc || '');
+        } catch {
+          setLinkUrl(saved);
+        }
+      }
+      setLoading(false);
     } else {
       loadUpload(storageKey).then((data) => {
         if (data) setPreview(data);
       }).finally(() => setLoading(false));
     }
-    if (type === 'link') setLoading(false);
   }, [storageKey, type]);
 
   const handleClick = () => {
@@ -88,6 +97,7 @@ function PlaceholderCard({
     e.stopPropagation();
     if (type === 'link') {
       setLinkUrl('');
+      setLinkDesc('');
       localStorage.removeItem(LINK_PREFIX + storageKey);
     } else {
       setPreview(null);
@@ -97,13 +107,17 @@ function PlaceholderCard({
 
   const handleLinkSave = () => {
     if (linkUrl.trim()) {
-      localStorage.setItem(LINK_PREFIX + storageKey, linkUrl.trim());
+      localStorage.setItem(LINK_PREFIX + storageKey, JSON.stringify({
+        url: linkUrl.trim(),
+        desc: linkDesc.trim(),
+      }));
       setShowLinkInput(false);
     }
   };
 
   const handleLinkRemove = () => {
     setLinkUrl('');
+    setLinkDesc('');
     localStorage.removeItem(LINK_PREFIX + storageKey);
   };
 
@@ -157,16 +171,21 @@ function PlaceholderCard({
           </>
         ) : linkUrl ? (
           <div className="flex flex-col items-center justify-between h-full p-3 sm:p-4">
-            <div className="flex-1 flex flex-col items-center justify-center gap-2">
-              <span className="text-xl">🔗</span>
+            <div className="flex-1 flex flex-col items-center justify-center gap-1">
+              <span className="text-lg">🔗</span>
               <a
                 href={linkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#D7E2EA] text-xs sm:text-sm font-medium hover:text-[#B600A8] transition-colors break-all text-center underline leading-tight"
               >
-                {linkUrl.length > 36 ? linkUrl.slice(0, 36) + '...' : linkUrl}
+                {linkUrl.length > 32 ? linkUrl.slice(0, 32) + '...' : linkUrl}
               </a>
+              {linkDesc && (
+                <p className="text-[#D7E2EA]/40 text-[10px] sm:text-xs text-center leading-snug mt-1 line-clamp-3">
+                  {linkDesc}
+                </p>
+              )}
             </div>
             <div className="flex gap-3 mt-auto pt-2">
               <button
@@ -235,7 +254,16 @@ function PlaceholderCard({
                 focus:border-[#B600A8]/50 transition-colors
                 placeholder:text-[#D7E2EA]/30"
               autoFocus
-              onKeyDown={(e) => { if (e.key === 'Enter') handleLinkSave(); }}
+            />
+            <textarea
+              value={linkDesc}
+              onChange={(e) => setLinkDesc(e.target.value)}
+              placeholder="添加说明介绍（选填）..."
+              rows={3}
+              className="w-full mt-3 bg-[#0C0C0C] border border-[#D7E2EA]/20 rounded-xl
+                px-4 py-3 text-[#D7E2EA] text-sm outline-none resize-none
+                focus:border-[#B600A8]/50 transition-colors
+                placeholder:text-[#D7E2EA]/30"
             />
             <div className="flex gap-3 mt-4">
               <button
