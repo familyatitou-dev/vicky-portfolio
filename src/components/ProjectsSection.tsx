@@ -28,8 +28,6 @@ const AI_ITEMS: PortfolioItem[] = [
     items: [{ label: '网页链接 ①' }, { label: '网页链接 ②' }] },
   { label: 'AI商业视频', count: '×2', type: 'video',
     items: [{ label: 'AI商业视频 ①' },{ label: 'AI商业视频 ②' }] },
-  { label: '小程序', count: '×2', type: 'link',
-    items: [{ label: '小程序链接 ①' }, { label: '小程序链接 ②' }] },
   { label: 'Skill搭建', count: '×1', type: 'link', items: [{ label: 'Skill链接' }] },
 ];
 
@@ -338,6 +336,9 @@ export default function ProjectsSection() {
         <p className="text-[#D7E2EA]/40 font-light tracking-wide"
           style={{ fontSize: 'clamp(0.8rem, 1.4vw, 1rem)' }}>
           {tabs.find((t) => t.key === activeTab)?.sub}
+        </p>
+        <p className="text-[#D7E2EA]/15 text-[10px] sm:text-xs tracking-wide mt-3">
+          💡 上传内容保存在当前浏览器，同一设备同一浏览器刷新不丢失；换设备需重新上传
         </p>
       </div>
 
