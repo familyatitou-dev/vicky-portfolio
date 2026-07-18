@@ -1,0 +1,62 @@
+{
+  "files": {
+    "ai-AI商业视频-0": "portfolio/ai-AI商业视频-0.mp4",
+    "ai-AI商业视频-1": "portfolio/ai-AI商业视频-1.mp4",
+    "ai-海报设计-0": "portfolio/ai-海报设计-0.png",
+    "ai-海报设计-1": "portfolio/ai-海报设计-1.png",
+    "ai-海报设计-2": "portfolio/ai-海报设计-2.jpg",
+    "ai-海报设计-3": "portfolio/ai-海报设计-3.png",
+    "ai-海报设计-4": "portfolio/ai-海报设计-4.png",
+    "ai-海报设计-5": "portfolio/ai-海报设计-5.jpg",
+    "ai-海报设计-6": "portfolio/ai-海报设计-6.png",
+    "ai-海报设计-7": "portfolio/ai-海报设计-7.png",
+    "ai-海报设计-8": "portfolio/ai-海报设计-8.png",
+    "ai-海报设计-9": "portfolio/ai-海报设计-9.jpg",
+    "newmedia-AI视频-0": "portfolio/newmedia-AI视频-0.mp4",
+    "newmedia-AI视频-1": "portfolio/newmedia-AI视频-1.mp4",
+    "newmedia-AI视频-2": "portfolio/newmedia-AI视频-2.mp4",
+    "newmedia-AI视频-3": "portfolio/newmedia-AI视频-3.mp4",
+    "newmedia-口播剪辑-0": "portfolio/newmedia-口播剪辑-0.mp4",
+    "newmedia-口播剪辑-1": "portfolio/newmedia-口播剪辑-1.mp4",
+    "newmedia-口播剪辑-2": "portfolio/newmedia-口播剪辑-2.mp4",
+    "newmedia-口播剪辑-3": "portfolio/newmedia-口播剪辑-3.mp4",
+    "newmedia-口播剪辑-4": "portfolio/newmedia-口播剪辑-4.mp4",
+    "newmedia-小红书账号-0": "portfolio/newmedia-小红书账号-0.jpg",
+    "newmedia-抖音账号矩阵-0": "portfolio/newmedia-抖音账号矩阵-0.jpg",
+    "newmedia-抖音账号矩阵-1": "portfolio/newmedia-抖音账号矩阵-1.jpg",
+    "newmedia-抖音账号矩阵-2": "portfolio/newmedia-抖音账号矩阵-2.jpg",
+    "newmedia-抖音账号矩阵-3": "portfolio/newmedia-抖音账号矩阵-3.jpg",
+    "newmedia-混剪作品-0": "portfolio/newmedia-混剪作品-0.mp4",
+    "newmedia-混剪作品-1": "portfolio/newmedia-混剪作品-1.mp4",
+    "newmedia-混剪作品-2": "portfolio/newmedia-混剪作品-2.mp4",
+    "newmedia-混剪作品-3": "portfolio/newmedia-混剪作品-3.mp4",
+    "newmedia-混剪作品-4": "portfolio/newmedia-混剪作品-4.mp4",
+    "newmedia-账号运营-0": "portfolio/newmedia-账号运营-0.png",
+    "newmedia-账号运营-1": "portfolio/newmedia-账号运营-1.jpg",
+    "newmedia-账号运营-2": "portfolio/newmedia-账号运营-2.jpg",
+    "newmedia-账号运营-3": "portfolio/newmedia-账号运营-3.jpg",
+    "newmedia-账号运营-4": "portfolio/newmedia-账号运营-4.jpg"
+  },
+  "links": {
+    "vicky-link-ai-Skill搭建-1": {
+      "url": "/video-analyzer https://www.douyin.com/video/7657490464265874408",
+      "desc": "一个能帮你分析视频的skill"
+    },
+    "vicky-link-ai-网页制作-0": {
+      "url": "https://whimsical-macaron-eb27fb.netlify.app",
+      "desc": "一个超全的日本旅行攻略网站"
+    },
+    "vicky-link-ai-Skill搭建-0": {
+      "url": ".claude/skills/build-personal-website.md",
+      "desc": "一个制作个人网站的skill"
+    },
+    "vicky-link-ai-网页制作-1": {
+      "url": "https://loquacious-tanuki-66c3c4.netlify.app",
+      "desc": "午餐不知道吃什么就点开这个网站吧,超有趣的抽盲盒形式哦,还能搜集你的专属美食卡片"
+    },
+    "vicky-link-ai-小程序-0": {
+      "url": "https://whimsical-macaron-eb27fb.netlify.app",
+      "desc": ""
+    }
+  }
+}
