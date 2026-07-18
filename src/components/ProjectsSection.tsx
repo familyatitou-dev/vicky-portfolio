@@ -125,10 +125,14 @@ function PlaceholderCard({
 
       <div
         onClick={handleClick}
-        style={{ aspectRatio: aspect }}
-        className="rounded-2xl sm:rounded-3xl
-          bg-gradient-to-br from-[#1a1a1a] to-[#0C0C0C]
-          border border-[#D7E2EA]/10
+        style={{
+          aspectRatio: aspect,
+          background: type === 'link'
+            ? 'linear-gradient(135deg, #1a1020, #0f0a14)'
+            : 'linear-gradient(135deg, #1a1a1a, #0C0C0C)',
+          borderColor: type === 'link' ? 'rgba(182,0,168,0.15)' : 'rgba(215,226,234,0.1)',
+        }}
+        className="rounded-2xl sm:rounded-3xl border
           flex flex-col items-center justify-center gap-2
           hover:border-[#D7E2EA]/30 transition-colors duration-300
           cursor-pointer group relative overflow-hidden"
@@ -152,20 +156,22 @@ function PlaceholderCard({
             </button>
           </>
         ) : linkUrl ? (
-          <div className="flex flex-col items-center gap-2 p-4">
-            <span className="text-[#B600A8] text-2xl">🔗</span>
-            <a
-              href={linkUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#D7E2EA]/60 text-xs hover:text-[#B600A8] transition-colors break-all text-center underline"
-            >
-              {linkUrl.length > 40 ? linkUrl.slice(0, 40) + '...' : linkUrl}
-            </a>
-            <div className="flex gap-2">
+          <div className="flex flex-col items-center justify-between h-full p-3 sm:p-4">
+            <div className="flex-1 flex flex-col items-center justify-center gap-2">
+              <span className="text-xl">🔗</span>
+              <a
+                href={linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D7E2EA] text-xs sm:text-sm font-medium hover:text-[#B600A8] transition-colors break-all text-center underline leading-tight"
+              >
+                {linkUrl.length > 36 ? linkUrl.slice(0, 36) + '...' : linkUrl}
+              </a>
+            </div>
+            <div className="flex gap-3 mt-auto pt-2">
               <button
                 onClick={(e) => { e.stopPropagation(); setShowLinkInput(true); }}
-                className="text-[#D7E2EA]/40 text-[10px] hover:text-[#D7E2EA] transition-colors"
+                className="text-[#D7E2EA]/50 text-[10px] hover:text-[#D7E2EA] transition-colors"
               >
                 编辑
               </button>
@@ -176,6 +182,19 @@ function PlaceholderCard({
                 删除
               </button>
             </div>
+          </div>
+        ) : type === 'link' ? (
+          <div className="flex flex-col items-center justify-center gap-2 p-3">
+            <span className="text-lg sm:text-xl opacity-50">🔗</span>
+            <span className="text-[#D7E2EA]/50 text-xs sm:text-sm tracking-wider text-center">
+              {label}
+            </span>
+            <span className="text-[#D7E2EA]/20 text-[10px] tracking-wider text-center">
+              {label.includes('网页') ? '粘贴链接地址' : '粘贴 Skill 链接'}
+            </span>
+            <span className="text-[#D7E2EA]/15 text-[10px] tracking-widest uppercase mt-1">
+              点击添加
+            </span>
           </div>
         ) : (
           <>
