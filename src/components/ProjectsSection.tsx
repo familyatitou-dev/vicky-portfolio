@@ -6,12 +6,13 @@ interface PortfolioItem {
   label: string;
   count: string;
   type: 'image' | 'video' | 'link';
+  aspect?: string;
   items?: { label?: string }[];
 }
 
 const NEW_MEDIA_ITEMS: PortfolioItem[] = [
-  { label: '小红书账号', count: '×1', type: 'image', items: [{ label: '小红书主页截图' }] },
-  { label: '抖音账号矩阵', count: '×4', type: 'image',
+  { label: '小红书账号', count: '×1', type: 'image', aspect: '3/4', items: [{ label: '小红书主页截图' }] },
+  { label: '抖音账号矩阵', count: '×4', type: 'image', aspect: '3/4',
     items: [{ label: '抖音账号 ①' },{ label: '抖音账号 ②' },{ label: '抖音账号 ③' },{ label: '抖音账号 ④' }] },
   { label: '口播剪辑', count: '×5', type: 'video',
     items: [{ label: '口播作品 ①' },{ label: '口播作品 ②' },{ label: '口播作品 ③' },{ label: '口播作品 ④' },{ label: '口播作品 ⑤' }] },
@@ -37,10 +38,12 @@ function PlaceholderCard({
   label,
   type,
   storageKey,
+  aspect = '4/3',
 }: {
   label: string;
   type: 'image' | 'video' | 'link';
   storageKey: string;
+  aspect?: string;
 }) {
   const [preview, setPreview] = useState<string | null>(null);
   const [linkUrl, setLinkUrl] = useState('');
@@ -123,7 +126,8 @@ function PlaceholderCard({
 
       <div
         onClick={handleClick}
-        className="aspect-[4/3] rounded-2xl sm:rounded-3xl
+        style={{ aspectRatio: aspect }}
+        className="rounded-2xl sm:rounded-3xl
           bg-gradient-to-br from-[#1a1a1a] to-[#0C0C0C]
           border border-[#D7E2EA]/10
           flex flex-col items-center justify-center gap-2
@@ -283,6 +287,7 @@ function PortfolioCategory({
                 label={sub.label || ''}
                 type={item.type}
                 storageKey={`${tabKey}-${item.label}-${j}`}
+                aspect={item.aspect}
               />
             ))}
           </div>
