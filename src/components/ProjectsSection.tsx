@@ -411,10 +411,11 @@ function PortfolioCategory({
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<'newmedia' | 'ai'>('newmedia');
   const [exporting, setExporting] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const editable = window.location.search.includes('edit');
 
-  // Preload manifest on mount
-  useEffect(() => { getPreload(); }, []);
+  // Preload manifest and wait before rendering cards
+  useEffect(() => { getPreload().then(() => setLoaded(true)); }, []);
 
   const handleExport = async () => {
     setExporting(true);
@@ -506,7 +507,10 @@ export default function ProjectsSection() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        {activeTab === 'newmedia' && (
+        {!loaded && (
+          <p className="text-[#D7E2EA]/30 text-center text-sm tracking-wider py-20">加载中...</p>
+        )}
+        {loaded && activeTab === 'newmedia' && (
           <FadeIn delay={0} y={20} duration={0.5}>
             <PortfolioCategory
               title="新媒体运营"
@@ -517,7 +521,7 @@ export default function ProjectsSection() {
             />
           </FadeIn>
         )}
-        {activeTab === 'ai' && (
+        {loaded && activeTab === 'ai' && (
           <FadeIn delay={0} y={20} duration={0.5}>
             <PortfolioCategory
               title="AI创作"
