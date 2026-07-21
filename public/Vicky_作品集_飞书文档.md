@@ -2,9 +2,9 @@
 
 > 新媒体运营 × AI创作 | Base 北京 | 微信 19164002075 | 3378803115@qq.com
 > 
-> 🌐 在线作品集：[familyatitou-dev.github.io/vicky-portfolio](https://familyatitou-dev.github.io/vicky-portfolio)
+> 🌐 在线作品集：[vicky-showcase.netlify.app](https://vicky-showcase.netlify.app)
 > 
-> 📄 PDF画册下载：[点击下载](https://familyatitou-dev.github.io/vicky-portfolio/Vicky_%E4%BD%9C%E5%93%81%E9%9B%86.pdf)
+> 📄 PDF画册下载：[点击下载](https://vicky-showcase.netlify.app/Vicky_%E4%BD%9C%E5%93%81%E9%9B%86.pdf)
 
 ---
 
@@ -26,40 +26,40 @@
 
 | 序号 | 平台 | 作品截图 |
 |:---:|------|:---|
-| 1 | 小红书账号主页 | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-0.png) |
-| 2 | 抖音账号矩阵 ① | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-1.jpg) |
-| 3 | 抖音账号矩阵 ② | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-2.jpg) |
-| 4 | 抖音账号矩阵 ③ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-3.jpg) |
-| 5 | 抖音账号矩阵 ④ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-4.jpg) |
+| 1 | 小红书账号主页 | [查看图片](https://vicky-showcase.netlify.app/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-0.png) |
+| 2 | 抖音账号矩阵 ① | [查看图片](https://vicky-showcase.netlify.app/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-1.jpg) |
+| 3 | 抖音账号矩阵 ② | [查看图片](https://vicky-showcase.netlify.app/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-2.jpg) |
+| 4 | 抖音账号矩阵 ③ | [查看图片](https://vicky-showcase.netlify.app/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-3.jpg) |
+| 5 | 抖音账号矩阵 ④ | [查看图片](https://vicky-showcase.netlify.app/portfolio/newmedia-%E8%B4%A6%E5%8F%B7%E8%BF%90%E8%90%A5-4.jpg) |
 
 ### 2. 口播剪辑 ×5
 
 | 序号 | 作品 | 在线观看 |
 |:---:|------|:---|
-| 1 | 口播作品 ① | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-0.mp4) |
-| 2 | 口播作品 ② | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-1.mp4) |
-| 3 | 口播作品 ③ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-2.mp4) |
-| 4 | 口播作品 ④ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-3.mp4) |
-| 5 | 口播作品 ⑤ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-4.mp4) |
+| 1 | 口播作品 ① | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-0.mp4) |
+| 2 | 口播作品 ② | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-1.mp4) |
+| 3 | 口播作品 ③ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-2.mp4) |
+| 4 | 口播作品 ④ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-3.mp4) |
+| 5 | 口播作品 ⑤ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91-4.mp4) |
 
 ### 3. 混剪作品 ×5
 
 | 序号 | 作品 | 在线观看 |
 |:---:|------|:---|
-| 1 | 混剪作品 ① | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-0.mp4) |
-| 2 | 混剪作品 ② | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-1.mp4) |
-| 3 | 混剪作品 ③ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-2.mp4) |
-| 4 | 混剪作品 ④ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-3.mp4) |
-| 5 | 混剪作品 ⑤ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-4.mp4) |
+| 1 | 混剪作品 ① | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-0.mp4) |
+| 2 | 混剪作品 ② | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-1.mp4) |
+| 3 | 混剪作品 ③ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-2.mp4) |
+| 4 | 混剪作品 ④ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-3.mp4) |
+| 5 | 混剪作品 ⑤ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-%E6%B7%B7%E5%89%AA%E4%BD%9C%E5%93%81-4.mp4) |
 
 ### 4. AI视频 ×4
 
 | 序号 | 作品 | 在线观看 |
 |:---:|------|:---|
-| 1 | AI视频 ① | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-0.mp4) |
-| 2 | AI视频 ② | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-1.mp4) |
-| 3 | AI视频 ③ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-2.mp4) |
-| 4 | AI视频 ④ | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-3.mp4) |
+| 1 | AI视频 ① | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-0.mp4) |
+| 2 | AI视频 ② | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-1.mp4) |
+| 3 | AI视频 ③ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-2.mp4) |
+| 4 | AI视频 ④ | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/newmedia-AI%E8%A7%86%E9%A2%91-3.mp4) |
 
 ---
 
@@ -69,16 +69,16 @@
 
 | 序号 | 作品 | 查看大图 |
 |:---:|------|:---|
-| 1 | 海报 ① | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-0.png) |
-| 2 | 海报 ② | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-1.png) |
-| 3 | 海报 ③ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-2.jpg) |
-| 4 | 海报 ④ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-3.png) |
-| 5 | 海报 ⑤ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-4.png) |
-| 6 | 海报 ⑥ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-5.jpg) |
-| 7 | 海报 ⑦ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-6.png) |
-| 8 | 海报 ⑧ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-7.png) |
-| 9 | 海报 ⑨ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-8.png) |
-| 10 | 海报 ⑩ | [查看图片](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-9.jpg) |
+| 1 | 海报 ① | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-0.png) |
+| 2 | 海报 ② | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-1.png) |
+| 3 | 海报 ③ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-2.jpg) |
+| 4 | 海报 ④ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-3.png) |
+| 5 | 海报 ⑤ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-4.png) |
+| 6 | 海报 ⑥ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-5.jpg) |
+| 7 | 海报 ⑦ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-6.png) |
+| 8 | 海报 ⑧ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-7.png) |
+| 9 | 海报 ⑨ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-8.png) |
+| 10 | 海报 ⑩ | [查看图片](https://vicky-showcase.netlify.app/portfolio/ai-%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1-9.jpg) |
 
 ### 2. 网页制作 ×2
 
@@ -91,8 +91,8 @@
 
 | 序号 | 作品 | 在线观看 |
 |:---:|------|:---|
-| 1 | AI商业视频 ① | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-AI%E5%95%86%E4%B8%9A%E8%A7%86%E9%A2%91-0.mp4) |
-| 2 | AI商业视频 ② | [▶ 点击播放](https://familyatitou-dev.github.io/vicky-portfolio/portfolio/ai-AI%E5%95%86%E4%B8%9A%E8%A7%86%E9%A2%91-1.mp4) |
+| 1 | AI商业视频 ① | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/ai-AI%E5%95%86%E4%B8%9A%E8%A7%86%E9%A2%91-0.mp4) |
+| 2 | AI商业视频 ② | [▶ 点击播放](https://vicky-showcase.netlify.app/portfolio/ai-AI%E5%95%86%E4%B8%9A%E8%A7%86%E9%A2%91-1.mp4) |
 
 ### 4. Skill搭建 ×2
 
@@ -129,8 +129,8 @@
 
 - **微信**：19164002075
 - **邮箱**：3378803115@qq.com
-- **网站**：[familyatitou-dev.github.io/vicky-portfolio](https://familyatitou-dev.github.io/vicky-portfolio/)
-- **PDF画册**：[下载链接](https://familyatitou-dev.github.io/vicky-portfolio/Vicky_%E4%BD%9C%E5%93%81%E9%9B%86.pdf)
+- **网站**：[vicky-showcase.netlify.app](https://vicky-showcase.netlify.app/)
+- **PDF画册**：[下载链接](https://vicky-showcase.netlify.app/Vicky_%E4%BD%9C%E5%93%81%E9%9B%86.pdf)
 
 ---
 
