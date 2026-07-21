@@ -17,7 +17,7 @@ PORTFOLIO_DIR = BASE / 'public' / 'portfolio'
 MANIFEST_PATH = PORTFOLIO_DIR / 'manifest.json'
 OUTPUT_DIR = BASE / 'docs'
 OUTPUT = OUTPUT_DIR / 'Vicky_作品集.pdf'
-DESKTOP_OUT = Path(r'c:\Users\DELL\Desktop') / 'Vicky_作品集.pdf'
+DESKTOP_OUT = Path(r'c:\Users\DELL\Desktop') / 'Vicky_作品集_v3.pdf'
 TEMP_DIR = BASE / 'scripts' / '.pdf_temp'
 
 # Max image dimension for PDF embedding (reduces file size dramatically)
@@ -350,7 +350,7 @@ class PortfolioPDF(FPDF):
         """2-column video cards with clickable links."""
         col_w = 85
         gap = 8
-        card_h = 45
+        card_h = 55
 
         for i, item in enumerate(items):
             col = i % 2
@@ -361,7 +361,7 @@ class PortfolioPDF(FPDF):
             if col == 0:
                 row_y = self.get_y()
 
-            if self.get_y() > 265:
+            if self.get_y() > 258:
                 self.add_page()
                 x = 17 + col * (col_w + gap)
                 if col == 0:
@@ -370,37 +370,42 @@ class PortfolioPDF(FPDF):
             y = self.get_y() if col == 0 else row_y
             self.set_xy(x, y)
 
-            # Card background
-            self.set_fill_color(*self._rgb(C_CARD))
+            # Card background - lighter tint
+            self.set_fill_color(*self._rgb((253, 244, 236)))
             self.rect(x, y, col_w, card_h, 'F')
 
-            # Left accent bar
-            self.set_fill_color(*self._rgb(C_ACCENT2))
-            self.rect(x, y, 3, card_h, 'F')
+            # Left accent bar - coral
+            self.set_fill_color(*self._rgb(C_ACCENT))
+            self.rect(x, y, 4, card_h, 'F')
 
-            # Play icon
-            self.set_font(self.font_body, '', 14)
-            self.set_text_color(*self._rgb(C_ACCENT))
-            self.set_xy(x + 12, y + 7)
-            self.cell(8, 8, '>')
+            # Play icon - filled circle with P
+            self.set_fill_color(*self._rgb(C_ACCENT))
+            self.ellipse(x + 9, y + 8, 10, 10, 'F')
+            self.set_text_color(*self._rgb(C_WHITE))
+            self.set_font(self.font_bold, '', 10)
+            self.set_xy(x + 9, y + 8)
+            self.cell(10, 10, 'P', align='C')
 
             # Label
             self.set_font(self.font_bold, '', 11)
             self.set_text_color(*self._rgb(C_DARK))
-            self.set_xy(x + 22, y + 8)
-            self.cell(col_w - 30, 7, item_label)
+            self.set_xy(x + 24, y + 7)
+            self.cell(col_w - 32, 7, item_label)
 
-            # Online link
+            # BIG clickable button
             online_url = get_online_url(tab, label, i)
             if online_url:
-                self.set_font(self.font_body, '', 8)
-                self.set_text_color(*self._rgb(C_ACCENT))
-                self.set_xy(x + 12, y + 28)
-                # Clickable link — fpdf2 supports link parameter
-                self.cell(col_w - 20, 5, '[点击在线观看]', link=online_url)
+                bw, bh = col_w - 16, 14
+                bx, by = x + 8, y + 28
+                self.set_fill_color(*self._rgb(C_ACCENT))
+                self.rect(bx, by, bw, bh, 'F')
+                self.set_text_color(*self._rgb(C_WHITE))
+                self.set_font(self.font_bold, '', 9)
+                self.set_xy(bx, by + 1)
+                self.cell(bw, bh - 1, '点击播放', align='C', link=online_url)
 
             if col == 1 or i == len(items) - 1:
-                self.set_xy(17, y + card_h + 4)
+                self.set_xy(17, y + card_h + 5)
             else:
                 self.set_xy(17, row_y)
 
